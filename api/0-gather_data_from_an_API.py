@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""Returns information for a given employee ID using a REST API"""
+
 import sys
 import requests
 
 
 def fetch_todo_progress(employee_id):
+    """Fetch and display the user's todo list progress from the API"""
     base_url = "https://jsonplaceholder.typicode.com"
 
     # Get user details
