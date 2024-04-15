@@ -23,13 +23,12 @@ def fetch_todo_progress(employee_id):
     completed_tasks = [todo for todo in todos if todo['completed']]
 
     # Prepare output
-    total_tasks = len(todos)
-    num_completed_tasks = len(completed_tasks)
-    employee_name = user['name']
+    all_tasks = len(todos)  # total number of task
+    n_cp_tasks = len(completed_tasks)  # number of completed tasks
+    e_name = user['name']  # employee name
 
     # Print the progress
-    print(f"Employee {employee_name} is done with
-          tasks({num_completed_tasks}/{total_tasks}): ")
+    print(f"Employee {e_name} is done with tasks({n_cp_tasks}/{all_tasks}): ")
     for task in completed_tasks:
         print(f"\t {task['title']}")
 
