@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Script to export dictionary of list of dictionary in the JSON format"""
 
-import requests
 import json
+import requests
 
 
 base_URL = 'https://jsonplaceholder.typicode.com'

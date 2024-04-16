@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Script to export data in the CSV format"""
 
-import sys
-import requests
 import csv
+import requests
+import sys
 
 
 base_URL = 'https://jsonplaceholder.typicode.com'
