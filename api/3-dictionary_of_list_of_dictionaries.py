@@ -31,11 +31,14 @@ def export_all_tasks_to_json():
         todos = todos_response.json()
 
         """Create a list of tasks for current user"""
-        task_list = [{
-            "username": username,
-            "task": todo["title"],
-            "completed": todo["completed"]
-            } for todo in todos]
+        task_list = []
+        for todo in todos:
+            task_data = {
+                "username": username,
+                "task": todo["title"],
+                "completed": todo["completed"]
+            }
+            task_list.append(task_data)
 
         """Add this list to the dictionary with the user ID as the key"""
         all_tasks[user_id] = task_list
