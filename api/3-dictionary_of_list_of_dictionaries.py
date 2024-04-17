@@ -39,7 +39,7 @@ def export_all_tasks_to_json():
             } for todo in todos]
 
         """Add this list to the dictionary with the user ID as the key"""
-        all_tasks[str(user_id)] = task_list
+        all_tasks[user_id] = task_list
 
     """Create json file"""
     file_name = "todo_all_employees.json"
