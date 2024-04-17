@@ -24,8 +24,7 @@ def export_all_tasks_to_json():
         username = user['name']
 
         """Fetch task data for each user"""
-        todos_response = requests.get(f'{base_URL}/todos',
-                                      params={'userId': user_id})
+        todos_response = requests.get(f'{base_URL}/todos?userId={user_id}')
         if todos_response.status_code != 200:
             print(f"Error fetching tasks data for user {user_id}")
             continue
